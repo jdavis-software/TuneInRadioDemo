@@ -10,6 +10,21 @@ $ npm install -d
 $ npm run dev
 ```
 
+### Notable Alias
+
+* @hooks
+* @store
+* @utils
+* @configs
+* @pages
+* @components
+* @images
+* @api
+* @reducers
+* @styles
+* @fonts
+* @sounds
+
 ### Notable Packages
 
 * [reselect] - Simple “selector” library for Redux.
@@ -36,6 +51,8 @@ I actually spend alot of time reading about some of the new [Web Audio API],[Str
 - Audio Decoding 
 - Compression
 - Filtering
+
+
 
 
 [reselect]: <https://github.com/reduxjs/reselect>
