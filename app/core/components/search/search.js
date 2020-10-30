@@ -1,8 +1,6 @@
 import './search.scss'
 import { Loader } from '@components'
-import { 
-        useFilterStore, 
-} from '@actions'
+import { useFilterStore } from '@hooks'
 // @third-party-packages
 import React, { Fragment,useRef, useState, useEffect, useMemo, memo } from 'react'
 import { useSelector } from 'react-redux'

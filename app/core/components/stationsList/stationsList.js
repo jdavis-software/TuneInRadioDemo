@@ -1,13 +1,8 @@
 import './stationsList.scss'
 import { Station, Loader } from '@components'
-import { 
-        useUserStore,
-        useRadioStationsStore,
-        useAudioPlayerStore
-} from '@actions'
+import {  useUserStore, useRadioStationsStore, useAudioPlayerStore } from '@hooks'
 // @third-party-packages
-import React, { Fragment, useMemo, memo } from 'react'
-import { useSelector, useDispatch, useStore } from 'react-redux'
+import React, { Fragment,  memo } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faAtom, faSadCry } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,11 +11,9 @@ export const StationsList = memo(() => {
         const { setRadioStationFavorite } = useUserStore();
         const { setAudioPlayerStation } = useAudioPlayerStore();
 
-        // load the stations
         const { isLoading } = load(); 
         const radioStations = getRadioStations()
 
-        // console.log('radio stations', radioStations)
         const loader = () => <Loader settings={{ icon: faAtom, size: '4x', spin: true  } }/>
         const empty = () => (
                 <div className="empty">
@@ -43,7 +36,6 @@ export const StationsList = memo(() => {
                         })
                 }
         }
-        // return (<Fragment>  </Fragment>)
         return (<Fragment> { isLoading  ? loader()  : radioStations.length > 0 ? radioStationsList() : empty()   } </Fragment>)
 })
 

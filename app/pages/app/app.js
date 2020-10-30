@@ -1,18 +1,13 @@
 import './app.scss';
-import { 
-        useFilterStore,
-        useRadioStationsStore
-} from '@actions'
+import { useFilterStore, useRadioStationsStore } from '@hooks'
 import { StationsList, Search, AudioPlayer } from '@components'
-import { useRadioStationCategorySelector  } from '@hooks'
 // @third-party-packages
-import React , { Fragment, useMemo, memo, useEffect }  from 'react'
-import { useSelector } from 'react-redux'
+import React , { Fragment, memo }  from 'react'
+import {  faHeart, faBan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faHeart } from '@fortawesome/free-solid-svg-icons';
 
 export const App = memo(() =>  {    
-        const { setRadioStationsFavoritesFilter, isFavoritesFilter, setRadioStationsCategoryFilter, setRadioStationsClearFilter  } = useFilterStore();
+        const { isFavoritesFilter, setRadioStationsFavoritesFilter,  setRadioStationsCategoryFilter, setRadioStationsClearFilter  } = useFilterStore();
         const { getRadioStationCategories } = useRadioStationsStore();
 
         const radioStationCategories = getRadioStationCategories();
@@ -29,7 +24,7 @@ export const App = memo(() =>  {
                                 <Search></Search>
                                 <div id='filters' className={isFavoritesFilter ? 'active' : ' '}>
                                         <FontAwesomeIcon onClick={ () => setRadioStationsFavoritesFilter() }   icon={faHeart} size='2x'/>
-                                        <FontAwesomeIcon onClick={ () => setRadioStationsClearFilter() }   icon={faHeart} size='2x'/>
+                                        <FontAwesomeIcon  onClick={ () => setRadioStationsClearFilter() }   icon={faBan} size='2x'/>
                                 </div>
                         </header>
                         <div id='categories'>{categories()}</div>

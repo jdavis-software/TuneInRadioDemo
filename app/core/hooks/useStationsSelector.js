@@ -1,4 +1,8 @@
+
+// @third-party-packages
 import { createSelector } from 'reselect'
+import  _  from 'lodash'
+
 //@radioStationsList
 const selectRadioStations = state => state.radioStations.data.list
 const selectRadioStationsCategories = state => state.radioStations.data.categories
@@ -8,8 +12,6 @@ const selectFilterRadioStationsSearch = state => state.filters.radioStations.sea
 const selectFilterRadioStationsCategories = state => state.filters.radioStations.categories
 //@userFavorites
 const selectUserRadioStationsFavorites = state => state.user.radioStations.favorites
-
-import  _  from 'lodash'
 
 export const selectUserRadioStationAndFavoritesSelector = createSelector(
         [selectRadioStations, selectUserRadioStationsFavorites],
@@ -48,7 +50,6 @@ export const useStationSelector = createSelector(
                 selectRadioStationsFilterCategories,
         ],
         (radioStations,  isFavorite, isSearch, isCategories, radioStationsCategories) => {
-
 
                 let params = [
                         {

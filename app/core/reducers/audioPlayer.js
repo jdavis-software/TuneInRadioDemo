@@ -1,8 +1,4 @@
-import { 
-        SET_AUDIO_PLAYER_STATION 
-} from '@actions'
-
-
+import { SET_AUDIO_PLAYER_STATION } from '@actions'
 
 const INIT_STATE = {
         station: false

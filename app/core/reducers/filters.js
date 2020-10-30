@@ -4,7 +4,6 @@ import {
         SET_RADIO_STATIONS_CLEAR_FILTER,
         SET_RADIO_STATIONS_CATEGORY_FILTER
 } from '@actions'
-// @third-party-packages
 
 const InitialState = {
         radioStations: {

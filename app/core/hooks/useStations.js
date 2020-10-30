@@ -3,7 +3,7 @@ import { StateProps } from '@configs'
 import { tuneInRadioAPI } from '@api'
 import { useAsyncState, useStationSelector, useRadioStationCategorySelector  } from '@hooks'
 // @third-party-packages
-import { useCallback, useEffect } from 'react'
+import { useCallback } from 'react'
 import { useSelector } from 'react-redux'
 
 export function useRadioStationsStore() {
@@ -18,7 +18,7 @@ export function useRadioStationsStore() {
 
         const _getRadioStationsCategories = useCallback(() => {
                 return  useSelector(useRadioStationCategorySelector)
-        })
+        },[])
 
         return {
                 load: _load,
