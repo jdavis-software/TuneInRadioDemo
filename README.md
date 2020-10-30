@@ -1,6 +1,9 @@
-# TuneInRadio Demo Project
+# TuneIN Radio (project)
 
-### Installation
+### Preview:
+![preview](app/core/images/tuneinradioapp.gif)
+
+### Installation:
 
 Install the dependencies and start the server.
 
@@ -10,7 +13,7 @@ $ npm install -d
 $ npm run dev
 ```
 
-### Notable Alias
+### Notable Alias:
 
 * @hooks
 * @store
@@ -25,24 +28,24 @@ $ npm run dev
 * @fonts
 * @sounds
 
-### Notable Packages
+### Notable Packages:
 
 * [reselect] - Simple “selector” library for Redux.
 * [redux-persist] - Persist and rehydrate a redux store.
 * [redux-thunk] - Thunk middleware for Redux.
 * [lodash] - A modern JavaScript utility library delivering modularity, performance, & extras.
 
-### Notable Feature
+### Notable Feature:
 
 Multi-param filtering, which can filter the Radio Stations by - search value, favorites, and category. 
 
-### Project Notes
+### Project Notes:
 
 While browsing [tuneinradio.com] I noticed the multi-param search feature re-painted everytime a param was added. I figured I would spend most the time building a better more performant multi-search feature providing a real-world use case, and code that you guys could actually use.
 
 >Although I didn't build a "stations recommendations" feature, it would be simple enough to just save the station tags/categories that the user listen to and then weight the categories/tags based on how long the user listened to each station, then recommend other stations with those tags and filter the categories by time listened.
 
-### Feature Enhancements
+### Feature Enhancements:
 
 I actually spend alot of time reading about some of the new [Web Audio API], [Streams API], [Service Worker API], I was very interested in these and thought of some of cool features that could be built out.
 
@@ -52,7 +55,7 @@ I actually spend alot of time reading about some of the new [Web Audio API], [St
 - Compression
 - Filtering
 
-![title](app/core/images/graph.png)
+![enhancements](app/core/images/graph.png)
 
 
 
