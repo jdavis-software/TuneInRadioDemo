@@ -69,7 +69,7 @@ export const useStationSelector = createSelector(
                 
                 filter = filter ? filter : 'NO_FILTER'
 
-                console.log('[DYNAMIC FILTER]: ', filter)
+                // console.log('[DYNAMIC FILTER]: ', filter)
                 
                 switch(filter){
                         case 'NO_FILTER':

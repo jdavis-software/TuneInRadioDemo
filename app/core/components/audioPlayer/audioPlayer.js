@@ -30,8 +30,8 @@ export const reducer = (state = initalState, {type, payload}) => {
                 case PLAYER_SET_SOURCE:
                         return {
                                 ...state,
-                                isLoading: false,
                                 isPlaying: true,
+                                isLoading: false,
                                 stationUrl: payload
                         }
                 case PLAYER_PLAYING:
@@ -47,17 +47,21 @@ export const reducer = (state = initalState, {type, payload}) => {
 }
 
 const initalState  = {
-        isLoading: false,
+        isLoading: true,
         isPlaying: false,
         stationUrl: false
 }
-export const AudioPlayer = () => {
+export const AudioPlayer = memo(() => {
         const player = useRef(null);
         const dispatch = useDispatch();
 
         const [{ isLoading, stationUrl, isPlaying}, localDispatch] = useReducer(reducer, initalState);
 
+
         const activeStation = useSelector(state => state.audioPlayer.station)
+
+        console.log('active station', activeStation)
+
 
         useEffect(() => {
                 if(activeStation) localDispatch(AudioPlayerActions.setSource(activeStation.streamUrl))
@@ -66,27 +70,22 @@ export const AudioPlayer = () => {
         const pause = () => localDispatch(AudioPlayerActions.setPlaying(false,false))
         const play = () => localDispatch(AudioPlayerActions.setSource(activeStation.streamUrl))
         const onVolume = (value) => player.current.volume = value / 100
-        // const onError = (e, { name }) => window.alert(`The station ${name} isn't working right now, try again later`)
 
         const createAudioTag = () => {
-                // console.log('isloading', isLoading, stationUrl)
-                if(!isLoading ){
-                        const src = stationUrl  ? stationUrl :  ''
-                        return(
-                                <Fragment>
-                                         { isPlaying   ?  (<button onClick={ () => pause() }>PAUSE</button>) : (<button onClick={ () => play() }>PLAY</button>)}
-                                        <audio ref={player} autoPlay={true} src={src} />
-                                        <input  type="range"  min="0" max="100" step="1" onInput={ (e) => onVolume(e.target.value) } onChange={ (e)=> onVolume(e.target.value) } />
-                                </Fragment>
-                        )
-                }
-                return <></>
-        }
+                const src = stationUrl ? stationUrl : 'false'
 
+                return(
+                        <Fragment>
+                                { isPlaying   ?  (<button onClick={ () => pause() }>PAUSE</button>) : (<button onClick={ () => play() }>PLAY</button>)}
+                                <audio src={src} autoPlay={true}/>
+                                <input  type="range"  min="0" max="100" step="1" onInput={ (e) => onVolume(e.target.value) } onChange={ (e)=> onVolume(e.target.value) } />
+                        </Fragment>
+                )
+        }
 
         return  (
                 <Fragment>
-                        { createAudioTag() }
+                        { !isLoading  ? createAudioTag() : null }
                 </Fragment>
         )
-}
+})
