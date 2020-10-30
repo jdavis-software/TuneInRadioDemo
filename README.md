@@ -14,7 +14,7 @@ $ npm run dev
 
 Multi-param filtering, which can filter the Radio Stations by - search value, favorites, and category. 
 
-#### Project Notes
+### Project Notes
 
 While browsing [tuneinradio.com] I noticed the multi-param search feature re-painted everytime a param was added. I figured I would spend most the time building a better more performant multi-search feature providing a real-world use case, and code that you guys could actually use.
 
