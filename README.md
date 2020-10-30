@@ -44,7 +44,7 @@ While browsing [tuneinradio.com] I noticed the multi-param search feature re-pai
 
 ### Feature Enhancements
 
-I actually spend alot of time reading about some of the new [Web Audio API],[Streams API],[Service Worker API], I was very interested in these and thought of some of cool features that could be built out.
+I actually spend alot of time reading about some of the new [Web Audio API], [Streams API], [Service Worker API], I was very interested in these and thought of some of cool features that could be built out.
 
 - Audio Visualizations
 - Ads (Audio & Video)
@@ -52,6 +52,7 @@ I actually spend alot of time reading about some of the new [Web Audio API],[Str
 - Compression
 - Filtering
 
+![title](app/core/images/graph.png)
 
 
 
