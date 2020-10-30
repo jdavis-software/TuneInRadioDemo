@@ -1,0 +1,21 @@
+{
+        "compilerOptions": {
+            "baseUrl": "./",
+            "paths": {
+                "@components": ["app/core/React-Com"],
+                "@store": ["app/core/store"],
+                "@actions": ["app/core/actions"],
+                "@hooks": ["app/core/hooks"],
+                "@utils": ["app/core/utils"],
+                "@configs": ["app/core/configs"],
+                "@pages": ["app/pages"],
+                "@routes": ["app/core/routes"],
+                "@api": ["app/core/apis"],
+                "@reducers": ["app/core/reducers"],
+                "@styles": ["app/core/styles"],
+                "@fonts": ["app/core/font"],
+                "@sounds": ["app/core/sounds"],
+            }
+        },
+        "exclude": ["node_modules", "dist"]
+}

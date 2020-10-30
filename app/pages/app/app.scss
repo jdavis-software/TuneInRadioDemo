@@ -1,0 +1,108 @@
+@use '@styles/_colors' as colors;
+
+#app {
+        position: relative;
+
+        height: 100%;
+        width: 100%;
+
+        display:    grid;
+        grid-template-rows:  60px 80px auto 60px;
+
+        header{
+                background-color: colors.$default;
+                display: grid;
+                grid-template-columns: 200px  auto 200px;
+                padding: 10px 0;
+                input {
+                        text-align: center;
+                }
+                #filters{
+                        padding: 0 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        // color: white;
+                        cursor: pointer;
+                        color:#4a11af;
+                        // &:hover {
+                        //         color: white;
+                        // }
+                        &:active {
+                                color:#4a11af;
+                        }
+
+                        &.active{
+                                color: white;
+                                
+                                &:active{
+                                        color: white;
+                                }
+                        }
+                }
+        }
+        #categories{
+                color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: auto;
+                background: white;
+                span{
+                        text-transform: capitalize;
+                        padding: 5px 10px;
+                        margin: 10px;
+                        color: white;
+                        background: #1313134f;
+                        border-radius: 5px;
+                        // border: 1px solid #673ab8;
+
+                        white-space: nowrap;
+                        cursor: pointer;
+                        &:hover{
+                                color: white;
+                                background: #673ab8;
+                                // border: 1px solid white;
+                        }
+                        &:active{
+                                color: white;
+                                // background: #ccc;
+                                // border: 1px solid white;
+
+                        }
+
+                        &.active{
+                                color: white;
+                                background: #4a11af;
+
+                                &:active{
+                                        color: white;
+                                        background: #ccc;
+                                }
+                        }
+                }
+        }
+
+        main{
+                background-color: colors.$ghost-white;
+                position: relative;
+                height: 100%;
+                width: 100%;
+                padding: 40px;
+                display: flex;
+                overflow: scroll;
+                justify-content: center;
+                flex-flow: row wrap;    
+                align-items: flex-start;
+                align-content: flex-start; 
+        }
+        
+        aside{
+                background-color: colors.$default;
+                display: grid;
+                grid-template-columns: auto 100px;
+                justify-content: center;
+                padding: 10px 0;
+        }
+
+}

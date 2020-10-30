@@ -1,0 +1,16 @@
+.empty{
+        height: 100%;
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        svg{
+                // font-size: 20px;
+                color: #673ab8;
+        }
+        div{
+                margin: 10px 0 0 0;
+                font-size: 30px;
+        }
+}

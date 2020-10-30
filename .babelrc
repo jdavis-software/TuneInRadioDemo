@@ -1,0 +1,15 @@
+{
+    "presets": ["@babel/env", "@babel/react"],
+    "plugins": [
+        "@babel/plugin-transform-runtime",
+        [
+            "@babel/plugin-proposal-class-properties",
+            {
+                "loose": true
+            }
+        ],
+        "@babel/plugin-proposal-object-rest-spread",
+        "@babel/syntax-export-extensions",
+        "@babel/transform-modules-commonjs"
+    ]
+}

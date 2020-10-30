@@ -1,0 +1,12 @@
+@use '@styles/_colors' as colors;
+
+header{
+        #loader{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                color: white;
+                padding: 0 10px;
+        }
+
+}

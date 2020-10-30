@@ -1,0 +1,5 @@
+{
+        "editor.tabSize": 8,
+        "prettier.jsxSingleQuote": true,
+        "editor.detectIndentation": false
+}

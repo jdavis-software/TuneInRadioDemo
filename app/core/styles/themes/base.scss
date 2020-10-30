@@ -1,0 +1,7 @@
+@mixin base{
+        color: colors.$ghost-white;
+        background-color: colors.$white;
+        &:hover{
+                color: colors.$medium-yellow-red
+        }
+}

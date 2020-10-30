@@ -1,0 +1,56 @@
+@use '@styles/_colors' as colors;
+.station{
+        cursor: pointer;
+        margin: 5px;
+        padding: 10px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        border: 1px solid white;
+
+        background: white;;
+
+        -webkit-box-shadow:    1px 1px 10px #aaa;
+        -moz-box-shadow:         1px 1px 10px #aaa;
+        box-shadow:                    1px 1px 10px #aaa;
+
+        &:active{
+                -webkit-box-shadow: inset 1px 1px 10px #aaa;
+                -moz-box-shadow:  inset 1px 1px 10px #aaa;
+                box-shadow:  inset 1px 1px 10px #aaa !important;
+                border: 1px solid white !important;
+        }
+
+
+        &:hover{
+                border: 1px solid colors.$default
+        }
+
+        span{
+                padding: 10px 0;
+
+        }
+        .icon{
+                cursor: pointer;
+                
+                color: #ccc;
+                &:hover{
+                        color: colors.$default;
+                }
+                &:active{
+                        color: #ccc;
+
+                }
+        }
+        .favorite{
+                color: colors.$default;
+        }
+        &:hover{
+                color: colors.$default;
+        }
+        &:active{
+                color: #ccc;
+
+        }
+
+}

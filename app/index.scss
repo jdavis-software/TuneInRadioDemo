@@ -1,0 +1,26 @@
+@import    '@styles/themes/light';
+@import    '@styles/themes/dark';
+// @import '@fonts/Poppins-Regular.tff';
+
+@font-face {
+        font-family: 'Poppins-Regular';
+        src: url('./core/fonts/Poppins-Regular.ttf') format('truetype');
+}
+    
+* {
+        box-sizing: border-box;
+        font-family: 'Poppins-Regular';
+}
+html {
+        height: 100%;
+        // background: red;
+        body {
+                height: 100%;
+
+                margin: 0 !important;
+        }
+}
+// overrides
+button {
+        cursor: pointer;
+}

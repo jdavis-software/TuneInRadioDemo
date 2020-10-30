@@ -1,0 +1,9 @@
+@use '@styles/_colors.scss' as colors;
+
+
+.light{
+        nav{
+                color: colors.$ghost-white;
+                background-color: colors.$white;
+        }
+}
