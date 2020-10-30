@@ -1,4 +1,4 @@
-# TuneIn Radio (Demo Project)
+# TuneIN Radio (project)
 
 ### Preview:
 ![preview](app/core/images/tuneinradioapp.gif)
