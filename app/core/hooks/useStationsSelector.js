@@ -2,7 +2,6 @@
 // @third-party-packages
 import { createSelector } from 'reselect'
 import  _  from 'lodash'
-
 //@radioStationsList
 const selectRadioStations = state => state.radioStations.data.list
 const selectRadioStationsCategories = state => state.radioStations.data.categories
