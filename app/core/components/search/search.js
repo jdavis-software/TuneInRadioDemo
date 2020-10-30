@@ -2,7 +2,7 @@ import './search.scss'
 import { Loader } from '@components'
 import { useFilterStore } from '@hooks'
 // @third-party-packages
-import React, { Fragment,useRef, useState, useEffect, useMemo, memo } from 'react'
+import React, { Fragment,useRef, useState, useEffect, memo } from 'react'
 import { useSelector } from 'react-redux'
 import { faAtom } from '@fortawesome/free-solid-svg-icons'
 
@@ -26,11 +26,11 @@ export const Search = memo(( ) => {
                 }
         },[searchValue, searchRef])
 
-        const loader = useMemo(() => <Loader settings={{ icon: faAtom, size: '2x', spin: true} }/>,[])
+        const loader = () => <Loader settings={{ icon: faAtom, size: '2x', spin: true} }/>
 
         return(
                 <Fragment>
-                        <div id='loader'>{!isSearching && searchValue ? loader : null}</div>
+                        <div id='loader'>{!isSearching && searchValue ? loader() : null}</div>
                         <input
                                 type="search"
                                 ref={searchRef}

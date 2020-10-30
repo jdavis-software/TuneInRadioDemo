@@ -1,7 +1,6 @@
 import './audioPlayer.scss'
-
 // @third-party-packages
-import React, { Fragment,useEffect, useRef, useReducer, useMemo, memo, useCallback, shallowEquals } from 'react';
+import React, { Fragment,useEffect, useRef, useReducer, memo } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 
 const PLAYER_SET_SOURCE = 'PLAYER_SET_SOURCE'
