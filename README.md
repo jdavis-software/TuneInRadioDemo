@@ -16,6 +16,7 @@ $ npm run dev
 ### Notable Alias:
 
 * @hooks
+* @actions
 * @utils
 * @configs
 * @pages
