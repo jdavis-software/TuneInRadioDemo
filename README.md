@@ -1,5 +1,8 @@
 # TuneInRadio Demo Project
 
+### App Preview
+![preview](app/core/images/tuneinradioapp.gif)
+
 ### Installation
 
 Install the dependencies and start the server.
@@ -52,7 +55,7 @@ I actually spend alot of time reading about some of the new [Web Audio API], [St
 - Compression
 - Filtering
 
-![title](app/core/images/graph.png)
+![enhancements](app/core/images/graph.png)
 
 
 
