@@ -2,7 +2,7 @@
         "compilerOptions": {
             "baseUrl": "./",
             "paths": {
-                "@components": ["app/core/React-Com"],
+                "@components": ["app/core/components"],
                 "@store": ["app/core/store"],
                 "@actions": ["app/core/actions"],
                 "@hooks": ["app/core/hooks"],
