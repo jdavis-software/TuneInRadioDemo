@@ -57,10 +57,7 @@ export const AudioPlayer = memo(() => {
 
         const [{ isLoading, stationUrl, isPlaying}, localDispatch] = useReducer(reducer, initalState);
 
-
         const activeStation = useSelector(state => state.audioPlayer.station)
-
-        console.log('active station', activeStation)
 
 
         useEffect(() => {
