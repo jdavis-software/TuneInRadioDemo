@@ -16,14 +16,12 @@ $ npm run dev
 ### Notable Alias:
 
 * @hooks
-* @store
 * @utils
 * @configs
 * @pages
 * @components
 * @images
 * @api
-* @reducers
 * @styles
 * @fonts
 * @sounds
