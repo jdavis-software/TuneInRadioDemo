@@ -5,6 +5,7 @@ import {
 } from '@actions'
 // @third-party-packages
 import React, { Fragment,useRef, useState, useEffect, useMemo, memo } from 'react'
+import { useSelector } from 'react-redux'
 import { faAtom } from '@fortawesome/free-solid-svg-icons'
 
 export const Search = memo(( ) => {
@@ -13,6 +14,13 @@ export const Search = memo(( ) => {
         const [isSearching, setSearching] = useState(false)
         const [searchValue, setSearchValue] = useState('')
         
+        const valueStore = useSelector(state => state.filters.radioStations.search);
+
+        useEffect(() => {
+                setSearchValue(valueStore ? valueStore  : '')
+        },[valueStore]);
+
+
         useEffect( () => {                        
                 if(searchValue === searchRef.current.value){
                         const timer = setTimeout(() => [setSearching(true), setRadioStationsSearchFilter(searchValue)], 200);

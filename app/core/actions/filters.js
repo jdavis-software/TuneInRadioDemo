@@ -3,6 +3,7 @@ import _ from 'lodash'
 import { useCallback } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
+export const SET_RADIO_STATIONS_CLEAR_FILTER = 'SET_RADIO_STATIONS_CLEAR_FILTER'
 export const SET_RADIO_STATIONS_FAVORITES_FILTER = 'SET_RADIO_STATIONS_FAVORITES_FILTER'
 export const SET_RADIO_STATIONS_SEARCH_FILTER = 'SET_RADIO_STATIONS_SEARCH_FILTER'
 export const SET_RADIO_STATIONS_CATEGORY_FILTER = 'SET_RADIO_STATIONS_CATEGORY_FILTER'
@@ -12,6 +13,10 @@ export function useFilterStore(){
 
         const isFavoritesFilter = useSelector(state => state.filters.radioStations.favorites)
         const isCategoryFilter = useSelector(state => state.filters.radioStations.categories)
+
+        const _setRadioStationsClearFilter = useCallback(() => dispatch({
+                type: SET_RADIO_STATIONS_CLEAR_FILTER
+        }),[])
 
         const _setRadioStationsFavoritesFilter = useCallback(() => dispatch({
                 type: SET_RADIO_STATIONS_FAVORITES_FILTER
@@ -35,6 +40,7 @@ export function useFilterStore(){
 
         return {
                 isFavoritesFilter: isFavoritesFilter,
+                setRadioStationsClearFilter: _setRadioStationsClearFilter,
                 setRadioStationsFavoritesFilter: _setRadioStationsFavoritesFilter,
                 setRadioStationsSearchFilter: _setRadioStationsSearchFilter,
                 setRadioStationsCategoryFilter: _setRadioStationsCategory

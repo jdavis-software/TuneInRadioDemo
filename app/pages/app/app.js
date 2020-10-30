@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faHeart } from '@fortawesome/free-solid-svg-icons';
 
 export const App = memo(() =>  {    
-        const { setRadioStationsFavoritesFilter, isFavoritesFilter, setRadioStationsCategoryFilter  } = useFilterStore();
+        const { setRadioStationsFavoritesFilter, isFavoritesFilter, setRadioStationsCategoryFilter, setRadioStationsClearFilter  } = useFilterStore();
         const { getRadioStationCategories } = useRadioStationsStore();
 
         const radioStationCategories = getRadioStationCategories();
@@ -29,6 +29,7 @@ export const App = memo(() =>  {
                                 <Search></Search>
                                 <div id='filters' className={isFavoritesFilter ? 'active' : ' '}>
                                         <FontAwesomeIcon onClick={ () => setRadioStationsFavoritesFilter() }   icon={faHeart} size='2x'/>
+                                        <FontAwesomeIcon onClick={ () => setRadioStationsClearFilter() }   icon={faHeart} size='2x'/>
                                 </div>
                         </header>
                         <div id='categories'>{categories()}</div>
