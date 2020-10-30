@@ -2,14 +2,7 @@
 	"name": "radio-app",
 	"version": "1.0.0",
 	"main": "index.js",
-	"dependencies": {
-		"@fortawesome/fontawesome": "^1.1.8",
-		"chalk": "^4.1.0",
-		"fontawesome": "^5.6.3",
-		"from": "^0.1.7",
-		"import": "0.0.6",
-		"webpack-cli": "^4.1.0"
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"@babel/core": "^7.12.3",
 		"@babel/plugin-proposal-class-properties": "^7.12.1",

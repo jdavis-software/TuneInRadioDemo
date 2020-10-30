@@ -39,7 +39,6 @@ module.exports = {
 			'@utils': resolve(__dirname, '../app/core/utils'),
 			'@configs': resolve(__dirname, '../app/core/configs'),
 			'@pages': resolve(__dirname, '../app/pages'),
-			'@store': resolve(__dirname, '../app/core/store'),
 			'@images': resolve(__dirname, '../app/core/images'),
 			'@actions': resolve(__dirname, '../app/core/actions'),
 			'@hooks': resolve(__dirname, '../app/core/hooks'),
