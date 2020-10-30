@@ -40,7 +40,7 @@ Multi-param filtering, which can filter the Radio Stations by - search value, fa
 
 While browsing [tuneinradio.com] I noticed the multi-param search feature re-painted everytime a param was added. I figured I would spend most the time building a better more performant multi-search feature providing a real-world use case, and code that you guys could actually use.
 
->Although I didn't build a "stations recommendations" feature, it would be simple enough to just save the station tags/categories that the user listen to and then >weight the categories/tags based on how long the user listened to each station, then recommend other stations with those tags and filter the categories by time >listened.
+>Although I didn't build a "stations recommendations" feature, it would be simple enough to just save the station tags/categories that the user listen to and then weight the categories/tags based on how long the user listened to each station, then recommend other stations with those tags and filter the categories by time listened.
 
 ### Feature Enhancements
 
